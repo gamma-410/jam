@@ -1,8 +1,6 @@
 2021・10・23
 # Hello pySSG
 
----
-
 このHTMLはpySSGを使用して生成されたものです。
 
 記事自体はmarkdownで書かれています。
@@ -19,5 +17,3 @@ README.mdに記載されています。
 
 
 [GitHub: pySSG](https://github.com/moka-drip/pySSG)
-
----
