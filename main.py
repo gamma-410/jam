@@ -15,21 +15,24 @@ md = markdown.Markdown()  # Create an instance?
 formatMdData = md.convert(mdData)  # To convert md to html, use md.convert.
 
 htmlData = '''
-    <!doctype html>
-    <html lang="ja">
-        <head>
-            <meta charset="utf-8">
-            <meta name="robots" content="noindex,nofollow">
-            <meta name="viewport" content="width=device-width,initial-scale=1"/>
-            <title>{}</title>
-            <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
-            {}
-        </body>
-    <html>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>{}</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+{}
+</body>
+<html>
 '''  # Define the HTML template.
 
-formatData = htmlData.format("pySSG", mdData)  # Put the title and formatted md into the template.
+formatData = htmlData.format("Hello, pySSG.", formatMdData)  # Put the title and formatted md into the template.
 
-print(formatData)  # TEST
+print("generate: " + args[1] + " >>> " + args[2])
+htmlFileName = args[2]
+writeHTMLFile = open(htmlFileName, 'w')
+writeHTMLFile.write(formatData)

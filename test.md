@@ -1,16 +1,23 @@
-# pySSG
-Markdown -> HTML StaticSiteGenerator.
+2021・10・23
+# Hello pySSG
 
-## How to use
-- 1.main.py <code>line:34</code>
-```python
-formatData = htmlData.format("----", mdData)
-# "----" = siteTitle.
-```
-- 2.terminal
-```shell
-$ python3 main.py ----.md
-```
+---
 
-## license
-MIT license.
+このHTMLはpySSGを使用して生成されたものです。
+
+記事自体はmarkdownで書かれています。
+
+こんな感じで簡単にサイトを生成できるので便利です。
+
+## How to use.
+README.mdに記載されています。
+
+- line33 のformat第一引数にタイトルを指定
+- python3 (第一引数にmd名) (第二引数にhtml名)
+
+さあ、あなたもmd -> htmlを使ってみましょう。
+
+
+[GitHub: pySSG](https://github.com/moka-drip/pySSG)
+
+---
