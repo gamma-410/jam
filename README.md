@@ -2,6 +2,10 @@
 Markdown -> HTML StaticSiteGenerator.
 
 ## How to use
+- pip install markdown
+```shell
+$ pip install markdown
+```
 - 1.main.py <code>line:33</code>
 ```python
 formatData = htmlData.format("----", mdData)
