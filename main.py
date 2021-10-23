@@ -7,7 +7,7 @@ import markdown
 args = sys.argv
 fileName = args[1]
 
-mdOpen = open(fileName, 'r')
+mdOpen = open(fileName+'.md', 'r')
 mdData = mdOpen.read()
 
 md = markdown.Markdown()  # Create an instance?
@@ -32,7 +32,7 @@ htmlData = '''
 
 formatData = htmlData.format("Hello, pySSG.", formatMdData)  # Put the title and formatted md into the template.
 
-print("generate: " + args[1] + " >>> " + args[2])
-htmlFileName = args[2]
+print("generate: " + args[1]+'.md' + " >>> " + args[1]+'.html')
+htmlFileName = args[1]+'.html'
 writeHTMLFile = open(htmlFileName, 'w')
 writeHTMLFile.write(formatData)

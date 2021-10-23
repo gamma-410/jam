@@ -11,7 +11,7 @@
 README.mdに記載されています。
 
 - line33 のformat第一引数にタイトルを指定
-- python3 (第一引数にmd名) (第二引数にhtml名)
+- python3 main.py (md名)
 
 さあ、あなたもmd -> htmlを使ってみましょう。
 

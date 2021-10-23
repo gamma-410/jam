@@ -14,8 +14,8 @@ formatData = htmlData.format("----", mdData)
 ```
 - 2.terminal
 ```shell
-$ python3 main.py (----.md) (----.html)
-generate: -----.md >> ----.html 
+$ python3 main.py (----)
+generate: ----.md >> ----.html 
 ```
 
 ## license
