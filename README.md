@@ -2,8 +2,9 @@
 Markdown -> HTML StaticSiteGenerator.
 
 ## How to use
-- pip install markdown
+- install
 ```shell
+$ git clone https://github.com/moka-drip/pySSG.git
 $ pip install markdown
 ```
 - 1.main.py <code>line:33</code>
