@@ -5,7 +5,7 @@ import os
 import glob
 import markdown
 
-title = "?????"
+title = "jam - PythonSSG"
 fileName = glob.glob('content/*.md')
 
 for name in fileName:
