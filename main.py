@@ -1,38 +1,30 @@
 # Create.main.py
 # jam.main.py
 
-import sys
+import os
+import glob
 import markdown
 
-args = sys.argv
-fileName = args[1]
+fileName = glob.glob('content/*.md')
 
-mdOpen = open(fileName+'.md', 'r')
-mdData = mdOpen.read()
+for name in fileName:
 
-md = markdown.Markdown()  # Create an instance?
+    mdOpen = open(name, 'r')
+    mdData = mdOpen.read()
 
-formatMdData = md.convert(mdData)  # To convert md to html, use md.convert.
+    md = markdown.Markdown()  # Create an instance?
 
-htmlData = '''
-<!doctype html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex,nofollow">
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>{}</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-{}
-</body>
-<html>
-'''  # Define the HTML template.
+    formatMdData = md.convert(mdData)  # To convert md to html, use md.convert.
 
-formatData = htmlData.format("Hello, pySSG.", formatMdData)  # Put the title and formatted md into the template.
+    html = open('base.html')  # Define the HTML template.
+    htmlData = html.read()
+    formatData = htmlData.format("Hello, pySSG.", formatMdData)  # Put the title and formatted md into the template.
 
-print("generate: " + args[1]+'.md' + " >>> " + args[1]+'.html')
-htmlFileName = args[1]+'.html'
-writeHTMLFile = open(htmlFileName, 'w')
-writeHTMLFile.write(formatData)
+for htmlName in fileName:
+    name = os.path.splitext(os.path.basename(htmlName))[0]
+
+    print("jam 🍓: ", name+".md", " >>> ", "Creating", name+".html")
+
+    htmlFileName = name+'.html'
+    writeHTMLFile = open("generate/"+htmlFileName, 'w')
+    writeHTMLFile.write(formatData)

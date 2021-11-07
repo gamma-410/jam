@@ -1,16 +1,16 @@
 # jam
-markdown -> HTML StaticSiteGenerator.
+markdown -> HTML StaticPageGenerator.
 
 ## How to use
 - install
 ```shell
-$ git clone https://github.com/moka-drip/pySSG.git
+$ git clone https://github.com/moka-drip/jam.git
 $ pip install markdown
 ```
 - 1.main.py <code>line:33</code>
 ```python
 formatData = htmlData.format("----", mdData)
-# "----" = siteTitle.
+# <title>----</title>
 ```
 
 
@@ -28,10 +28,13 @@ YYYY・MM・DD
 ---
 ```
 
-- 3.terminal
+- 3.run jam
 ```shell
-$ python3 main.py (----)
-generate: ----.md >> ----.html 
+$ python3 main.py 
+jam 🍓: test.md >>> Creating test.html
+
+# content/test.md <- article
+# generate/test.html <- HTML
 ``` 
 
 ## license

@@ -1,5 +1,5 @@
 2021・10・23
-# Hello jam
+# welcome jam. 
 
 このHTMLはjamを使用して生成されたものです。
 
@@ -10,10 +10,10 @@
 ## How to use.
 README.mdに記載されています。
 
-- line33 のformat第一引数にタイトルを指定
-- python3 main.py (md名)
+- <code>line33</code> の<code>formatData = htmlData.format("----", mdData)</code>にタイトルを指定
+- <code>python3 main.py</code>
 
-さあ、あなたもmd -> htmlを使ってみましょう。
+さあ、あなたもjamを使ってみましょう。
 
 
 [GitHub: jam](https://github.com/moka-drip/jam)
