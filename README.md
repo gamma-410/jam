@@ -1,5 +1,5 @@
-# pySSG
-Markdown -> HTML StaticSiteGenerator.
+# jam
+markdown -> HTML StaticSiteGenerator.
 
 ## How to use
 - install
