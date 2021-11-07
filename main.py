@@ -1,5 +1,5 @@
 # Create.main.py
-# pySSG.main.py
+# jam.main.py
 
 import sys
 import markdown
