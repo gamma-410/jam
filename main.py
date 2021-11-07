@@ -5,6 +5,7 @@ import os
 import glob
 import markdown
 
+title = "?????"
 fileName = glob.glob('content/*.md')
 
 for name in fileName:
@@ -16,9 +17,10 @@ for name in fileName:
 
     formatMdData = md.convert(mdData)  # To convert md to html, use md.convert.
 
-    html = open('base.html')  # Define the HTML template.
+    html = open('assets/base.html')  # Define the HTML template.
     htmlData = html.read()
-    formatData = htmlData.format("Hello, pySSG.", formatMdData)  # Put the title and formatted md into the template.
+    formatData = htmlData.format(title, formatMdData)  # Put the title and formatted md into the template.
+
 
 for htmlName in fileName:
     name = os.path.splitext(os.path.basename(htmlName))[0]
@@ -28,3 +30,5 @@ for htmlName in fileName:
     htmlFileName = name+'.html'
     writeHTMLFile = open("generate/"+htmlFileName, 'w')
     writeHTMLFile.write(formatData)
+    writeHTMLFile.close()
+

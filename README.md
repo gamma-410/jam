@@ -7,9 +7,9 @@ markdown -> HTML StaticPageGenerator.
 $ git clone https://github.com/moka-drip/jam.git
 $ pip install markdown
 ```
-- 1.main.py <code>line:33</code>
+- 1.main.py <code>line:8</code>
 ```python
-formatData = htmlData.format("----", mdData)
+title = "------"
 # <title>----</title>
 ```
 
