@@ -8,8 +8,9 @@ import markdown
 title = "jam - PythonSSG"
 fileName = glob.glob('content/*.md')
 
-for name in fileName:
-
+# i = 回数, name = 拡張子ついた名前, htmlName = 拡張子ついた名前
+for (i, name, htmlName) in zip(range(len(fileName)), fileName, fileName):
+#変換処理
     mdOpen = open(name, 'r')
     mdData = mdOpen.read()
 
@@ -21,8 +22,7 @@ for name in fileName:
     htmlData = html.read()
     formatData = htmlData.format(title, formatMdData)  # Put the title and formatted md into the template.
 
-
-for htmlName in fileName:
+#表示処理
     name = os.path.splitext(os.path.basename(htmlName))[0]
 
     print("jam 🍓: ", name+".md", " >>> ", "Creating", name+".html")
