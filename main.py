@@ -6,7 +6,7 @@ import glob
 import markdown
 
 title = "jam - PythonSSG"
-fileName = glob.gl('content/*.md')
+fileName = glob.glob('content/*.md')
 
 # i = 回数, name = 拡張子ついた名前, htmlName = 拡張子ついた名前
 for (i, name, htmlName) in zip(range(len(fileName)), fileName, fileName):
