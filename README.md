@@ -1,4 +1,4 @@
-# jam
+# 🍓 jam
 markdown -> HTML StaticPageGenerator.
 
 ## How to use
