@@ -5,7 +5,7 @@ import os
 import glob
 import markdown
 
-title = "#DRIP notes."
+title = "jam - PythonSSG"
 fileName = glob.glob('content/*.md')
 
 # i = 回数, name = 拡張子ついた名前, htmlName = 拡張子ついた名前
