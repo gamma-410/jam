@@ -1,10 +1,10 @@
-# 🍓 jam
-markdown -> HTML StaticPageGenerator.
+# 🍓 RaspberryJam
+markdown -> HTML PageGenerator.
 
 ## How to use
 - install
 ```shell
-$ git clone https://github.com/moka-drip/jam.git
+$ git clone https://github.com/moka-drip/RaspberryJam.git
 $ pip install markdown
 ```
 - 1.main.py <code>line:8</code>
@@ -41,4 +41,4 @@ jam 🍓: test.md >>> Creating test.html
 MIT license.
 
 ## Copyright
-Copyright 2021 dr-notes.work (@moka-drip.)
+Copyright 2021 dr-notes.work (@gamma-410.)
