@@ -61,15 +61,21 @@ $ python3 main.py
 
 
 ## (2) generate Index Pages.
-### remove comment out <code>main.py</code> <code>line:20 ~ 23</code> and <code>51 ~ 69</code>
+### remove comment out <code>main.py</code> <code>line:20 ~ 29</code> and <code>57 ~ 75</code>
 ```python
 
 # ブログ機能を追加しました！ 使用する場合はコメントを外してください！
 
-# # mdデータを準備
-    indexMdOpen = open('assets/index.md', 'a', encoding='utf-8')
+# mdデータを準備
+    indexMdOpen = open('assets/index.md', encoding='utf-8')
+    s = indexMdOpen.read()
+
     name1 = os.path.splitext(os.path.basename(htmlName))[0]
-    indexMdOpen.write('- [' + name1 + ' - ' + date + ']' + '(' + name1 + '.html)  \n')
+    s = '- [' + name1 + ' - ' + date + ']' + '(' + name1 + '.html)  \n' + s
+    
+    indexMdOpen = open('assets/index.md', 'w', encoding='utf-8')
+    indexMdOpen.write(s)
+
     indexMdOpen.close()
 ```
 
